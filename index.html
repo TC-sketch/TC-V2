@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC Chauffeur Bookings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">TC<span class="highlight">Chauffeur</span></div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#book">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Luxury Chauffeur Services</h1>
+      <p>Travel in comfort and style with TC Chauffeur</p>
+      <a href="#book" class="btn-primary">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services fade-in">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card fade-in">
+        <img src="images/airport.jpg" alt="Airport Transfers" class="fade-in">
+        <h3>Airport Transfers</h3>
+        <p>Reliable luxury transfers to and from all UK airports.</p>
+      </div>
+      <div class="card fade-in">
+        <img src="images/wedding.jpg" alt="Wedding Chauffeur" class="fade-in">
+        <h3>Weddings</h3>
+        <p>Arrive in style and elegance on your special day.</p>
+      </div>
+      <div class="card fade-in">
+        <img src="images/business.jpg" alt="Business Travel" class="fade-in">
+        <h3>Business Travel</h3>
+        <p>Professional, discreet service tailored for executives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Section -->
+  <section id="fleet" class="fleet fade-in">
+    <h2>Our Fleet</h2>
+    <div class="fleet-gallery">
+      <img src="images/mercedes.jpg" alt="Mercedes S-Class" class="fade-in">
+      <img src="images/range-rover.jpg" alt="Range Rover" class="fade-in">
+      <img src="images/vclass.jpg" alt="Mercedes V-Class" class="fade-in">
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="book" class="booking fade-in">
+    <h2>Book Your Chauffeur</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Pickup Location" required>
+        <input type="text" placeholder="Drop-off Location" required>
+      </div>
+      <div class="form-group">
+        <input type="date" required>
+        <input type="time" required>
+      </div>
+      <button type="submit" class="btn-primary">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <h3>TC<span class="highlight">Chauffeur</span></h3>
+      <p>Email: info@tcchauffeur.com | Phone: +44 1234 567890</p>
+      <p>&copy; 2025 TC Chauffeur. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close menu on mobile
+        document.getElementById('nav-menu').classList.remove('active');
+        document.getElementById('hamburger').classList.remove('active');
+      });
+    });
+
+    // Fade-In on Scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    // Mobile Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
