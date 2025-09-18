@@ -3,136 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TC Chauffeur Bookings</title>
+  <title>TC Chauffeur</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body id="top">
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="#top">
-        <img src="images/logo.png" alt="TC Chauffeur Logo">
-      </a>
-    </div>
-    <nav id="nav-menu">
-      <ul>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#top">
+          <img src="images/logo.png" alt="TC Chauffeur Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#fleet">Fleet</a></li>
-        <li><a href="#book">Book Now</a></li>
+        <li><a href="#booking">Booking</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content fade-in">
+    <div class="hero-content">
       <h1>Luxury Chauffeur Services</h1>
-      <p>Travel in comfort and style with TC Chauffeur</p>
-      <a href="#book" class="btn-primary">Book Now</a>
+      <p>Arrive in style with TC Chauffeur</p>
+      <a href="#booking" class="btn">Book Now</a>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services fade-in">
+  <!-- Services -->
+  <section id="services" class="fade-in">
     <h2>Our Services</h2>
-    <div class="card-grid">
-      <div class="card fade-in">
-        <img src="images/airport.jpg" alt="Airport Transfers" class="fade-in">
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/service1.jpg" alt="Airport Transfers">
         <h3>Airport Transfers</h3>
-        <p>Reliable luxury transfers to and from all UK airports.</p>
+        <p>Reliable, stress-free journeys to and from the airport.</p>
       </div>
-      <div class="card fade-in">
-        <img src="images/wedding.jpg" alt="Wedding Chauffeur" class="fade-in">
-        <h3>Weddings</h3>
-        <p>Arrive in style and elegance on your special day.</p>
+      <div class="service-card">
+        <img src="images/service2.jpg" alt="Corporate Travel">
+        <h3>Corporate Travel</h3>
+        <p>Professional chauffeur service for your business needs.</p>
       </div>
-      <div class="card fade-in">
-        <img src="images/business.jpg" alt="Business Travel" class="fade-in">
-        <h3>Business Travel</h3>
-        <p>Professional, discreet service tailored for executives.</p>
+      <div class="service-card">
+        <img src="images/service3.jpg" alt="Special Occasions">
+        <h3>Special Occasions</h3>
+        <p>Make your special day truly memorable with our luxury fleet.</p>
       </div>
     </div>
   </section>
 
-  <!-- Fleet Section -->
-  <section id="fleet" class="fleet fade-in">
+  <!-- Fleet -->
+  <section id="fleet" class="fade-in">
     <h2>Our Fleet</h2>
-    <div class="fleet-gallery">
-      <img src="images/mercedes.jpg" alt="Mercedes S-Class" class="fade-in">
-      <img src="images/range-rover.jpg" alt="Range Rover" class="fade-in">
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <img src="images/fleet1.jpg" alt="Mercedes S-Class">
+        <h3>Mercedes S-Class</h3>
+      </div>
+      <div class="fleet-card">
+        <img src="images/fleet2.jpg" alt="Range Rover">
+        <h3>Range Rover</h3>
+      </div>
+      <div class="fleet-card">
+      </div>
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <section id="book" class="booking fade-in">
-    <h2>Book Your Chauffeur</h2>
-    <form>
+  <!-- Booking -->
+  <section id="booking" class="fade-in">
+    <h2>Book Your Ride</h2>
+    <form id="bookingForm">
       <div class="form-group">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
       </div>
       <div class="form-group">
-        <input type="text" placeholder="Pickup Location" required>
-        <input type="text" placeholder="Drop-off Location" required>
+        <label for="pickup">Pickup Location</label>
+        <input type="text" id="pickup" name="pickup" required>
       </div>
       <div class="form-group">
-        <input type="date" required>
-        <input type="time" required>
+        <label for="dropoff">Dropoff Location</label>
+        <input type="text" id="dropoff" name="dropoff" required>
       </div>
-      <button type="submit" class="btn-primary">Submit Booking</button>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <button type="submit" class="btn">Submit via WhatsApp</button>
     </form>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <p>Email: transcendconciergeltd@gmail.com</p>
+    <p>Phone: +44 7301 905072</p>
+  </section>
+
   <!-- Footer -->
-  <footer id="contact" class="footer">
-    <div class="footer-content">
-      <p>Email: transcendconciergeltd@gmail.com | whatsapp: +44 7301 905072</p>
-      <p>&copy; 2025 TC. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 TC. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- WhatsApp Booking Script -->
   <script>
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-        // Close menu on mobile
-        document.getElementById('nav-menu').classList.remove('active');
-        document.getElementById('hamburger').classList.remove('active');
-      });
-    });
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-    // Fade-In on Scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
+      const name = document.getElementById("name").value;
+      const pickup = document.getElementById("pickup").value;
+      const dropoff = document.getElementById("dropoff").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+      const message = `New Booking Request:
+      Name: ${name}
+      Pickup: ${pickup}
+      Dropoff: ${dropoff}
+      Date: ${date}
+      Time: ${time}`;
 
-    // Mobile Hamburger Menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      const whatsappURL = `https://wa.me/447301905072?text=${message}`;
+      window.open(whatsappURL, "_blank");
     });
   </script>
+
 </body>
 </html>
