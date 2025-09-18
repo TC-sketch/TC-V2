@@ -84,7 +84,7 @@
         <input type="date" required>
         <input type="time" required>
       </div>
-      <button type="submit" class="btn-primary">Submit Booking</button>
+      <button type="submit" class="btn">Submit via WhatsApp</button>
     </form>
   </section>
 
@@ -135,5 +135,21 @@
       navMenu.classList.toggle('active');
     });
   </script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const pickup = document.getElementById("pickup").value;
+    const dropoff = document.getElementById("dropoff").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    // Build WhatsApp message
+    const message = `New Booking Request:%0A
+    Name: ${name}%0A
+    Pickup: ${pickup}%0A
+    Dropoff: ${dropoff}%0A
+    Date: ${date}%0A
+    Time: ${time}`;
 </body>
 </html>
