@@ -93,5 +93,11 @@
     <p>Email: transcendconciergeltd@gmail.com</p>
     <p>Phone: +44 7301 905072</p>
   </section>
+  <script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
 </body>
 </html>
