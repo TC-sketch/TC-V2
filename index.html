@@ -67,25 +67,34 @@
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <section id="book" class="booking fade-in">
-    <h2>Book Your Chauffeur</h2>
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Pickup Location" required>
-        <input type="text" placeholder="Drop-off Location" required>
-      </div>
-      <div class="form-group">
-        <input type="date" required>
-        <input type="time" required>
-      </div>
-      <button type="submit" class="btn-primary">Submit Booking</button>
-    </form>
-  </section>
+  <!-- Booking -->
+<section id="booking" class="fade-in">
+  <h2>Book Your Ride</h2>
+  <form id="bookingForm" action="https://formspree.io/f/movnokbz" method="POST">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="pickup">Pickup Location</label>
+      <input type="text" id="pickup" name="pickup" required>
+    </div>
+    <div class="form-group">
+      <label for="dropoff">Dropoff Location</label>
+      <input type="text" id="dropoff" name="dropoff" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+    </div>
+    <button type="submit" class="btn">Submit Booking</button>
+  </form>
+</section>
+
 
   <!-- Footer -->
   <footer id="contact" class="footer">
