@@ -3,136 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TC Chauffeur Bookings</title>
+  <title>TC Chauffeur</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body id="top">
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="#top">
-        <img src="images/logo.png" alt="TC Chauffeur Logo">
-      </a>
-    </div>
-    <nav id="nav-menu">
-      <ul>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#top"><img src="images/logo.png" alt="TC Chauffeur Logo"></a>
+      </div>
+      <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#fleet">Fleet</a></li>
-        <li><a href="#book">Book Now</a></li>
+        <li><a href="#booking">Booking</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content fade-in">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
       <h1>Luxury Chauffeur Services</h1>
-      <p>Travel in comfort and style with TC</p>
-      <a href="#book" class="btn-primary">Book Now</a>
+      <p>Arrive in style with TC Chauffeur</p>
+      <a href="#booking" class="btn hero-btn">Book Now</a>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services fade-in">
+  <!-- Services -->
+  <section class="services" id="services">
     <h2>Our Services</h2>
-    <div class="card-grid">
-      <div class="card fade-in">
-        <img src="images/airport.jpg" alt="Airport Transfers" class="fade-in">
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="images/airport.jpg" alt="Airport Transfers">
         <h3>Airport Transfers</h3>
-        <p>Reliable luxury transfers to and from all UK airports.</p>
+        <p>Reliable, punctual, and luxurious transfers to and from all major airports.</p>
       </div>
-      <div class="card fade-in">
-        <img src="images/wedding.jpg" alt="Wedding Chauffeur" class="fade-in">
-        <h3>Weddings</h3>
-        <p>Arrive in style and elegance on your special day.</p>
+      <div class="service-card">
+        <img src="images/corporate.jpg" alt="Corporate Travel">
+        <h3>Corporate Travel</h3>
+        <p>Professional chauffeur services tailored for business and executive needs.</p>
       </div>
-      <div class="card fade-in">
-        <img src="images/business.jpg" alt="Business Travel" class="fade-in">
-        <h3>Business Travel</h3>
-        <p>Professional, discreet service tailored for executives.</p>
+      <div class="service-card">
+        <img src="images/events.jpg" alt="Special Events">
+        <h3>Special Events</h3>
+        <p>Arrive in style for weddings, parties, and other special occasions.</p>
       </div>
     </div>
   </section>
 
-  <!-- Fleet Section -->
-  <section id="fleet" class="fleet fade-in">
+  <!-- Fleet -->
+  <section class="fleet" id="fleet">
     <h2>Our Fleet</h2>
-    <div class="fleet-gallery">
-      <img src="images/mercedes.jpg" alt="Mercedes S-Class" class="fade-in">
-      <img src="images/range-rover.jpg" alt="Range Rover" class="fade-in">
+    <div class="fleet-cars">
+      <div class="car-card">
+        <img src="images/mercedes-sclass.jpg" alt="Mercedes S-Class">
+        <h3>Mercedes S-Class</h3>
+      </div>
+      <div class="car-card">
+        <img src="images/mercedes-vclass.jpg" alt="Mercedes V-Class">
+        <h3>Mercedes V-Class</h3>
+      </div>
+      <div class="car-card">
+        <img src="images/bmw-7series.jpg" alt="BMW 7 Series">
+        <h3>BMW 7 Series</h3>
+      </div>
     </div>
   </section>
 
-  <!-- Booking Form -->
-  <section id="book" class="booking fade-in">
-    <h2>Book Your Chauffeur</h2>
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="Pickup Location" required>
-        <input type="text" placeholder="Drop-off Location" required>
-      </div>
-      <div class="form-group">
-        <input type="date" required>
-        <input type="time" required>
-      </div>
-      <button type="submit" class="btn-primary">Submit Booking</button>
+  <!-- Booking -->
+  <section class="booking" id="booking">
+    <h2>Book Your Journey</h2>
+    <form action="mailto:transcendconciergeltd@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="pickup" placeholder="Pickup Location" required>
+      <input type="text" name="dropoff" placeholder="Drop-off Location" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <textarea name="message" placeholder="Additional Details"></textarea>
+      <button type="submit" class="btn">Submit</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer id="contact" class="footer">
-    <div class="footer-content">
-      <p>Email: transcendconciergeltd@gmail.com | whatsapp: +44 7301 905072</p>
-      <p>&copy; 2025 TC. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-        // Close menu on mobile
-        document.getElementById('nav-menu').classList.remove('active');
-        document.getElementById('hamburger').classList.remove('active');
-      });
-    });
-
-    // Fade-In on Scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-
-    // Mobile Hamburger Menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-  </script>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: transcendconciergeltd@gmail.com</p>
+    <p>Phone: +44 7301 905072</p>
+  </section>
 </body>
 </html>
