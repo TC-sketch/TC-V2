@@ -75,7 +75,7 @@
   <!-- Booking -->
   <section class="booking" id="booking">
     <h2>Book Your Journey</h2>
-    <form action="mailto:transcendconciergeltd@gmail.com" method="POST" enctype="text/plain">
+    <form id="bookingForm">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="text" name="pickup" placeholder="Pickup Location" required>
@@ -97,6 +97,28 @@
   window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     header.classList.toggle("scrolled", window.scrollY > 50);
+        document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const phone = document.querySelector('input[name="phone"]').value;
+      const pickup = document.querySelector('input[name="pickup"]').value;
+      const dropoff = document.querySelector('input[name="dropoff"]').value;
+      const date = document.querySelector('input[name="date"]').value;
+      const time = document.querySelector('input[name="time"]').value;
+
+      const message = `New Booking Request:
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Pickup: ${pickup}
+      Dropoff: ${dropoff}
+      Date: ${date}
+      Time: ${time}`;
+
+      const whatsappUrl = `https://wa.me/447301905072?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank");
   });
 </script>
 </body>
